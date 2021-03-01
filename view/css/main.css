@@ -1,0 +1,381 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background-color: #333;
+    overflow: hidden;
+}
+
+header {
+    background-color: #222;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    height: 12vh;
+}
+
+h1 {
+    font-size: 6vh;
+    padding-top: 2vh;
+}
+
+main {
+    width: 100%;
+    height: 88vh;
+    background-color: #555;
+    padding: 5px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ddd;
+    cursor: pointer;
+}
+
+.results {
+    height: 63vh;
+    font-size: 1.7vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border-bottom: #222 2px solid;
+}
+
+.results h2 {
+    margin: .5em 0 .5em 2em;
+    font-size: 2em;
+}
+
+.results::-webkit-scrollbar {
+    display: none;
+  }
+
+.empty-results {
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+
+.card {
+    height: 9%;
+    background-color: #333;
+    border-radius: .5vh;
+    margin: auto;
+    margin-top: .5vh;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    padding-top: .3em;
+}
+
+.item-card {
+    display: grid;
+    grid-template-columns: 5.6vh auto;
+    grid-template-rows: 50% 50%;
+    font-size: 1.5vh;
+}
+
+.item-card form {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    width: 100%;
+    height: 100%;
+}
+
+.item-card button {  
+    width: 2.8vh;
+    height: 2.8vh;
+    border: none;
+    background-color: #777;
+    border-radius: 50%;
+    margin: 1.4vh;
+}
+
+.item-card button:hover {
+    background-color: #999;
+    cursor: pointer;
+}
+
+.item-card h3 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+}
+
+.item-card p {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    font-size: 1em;
+    padding-top: .3em;
+}
+
+.category-card {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 100%;
+}
+
+.category-card h3 {
+    margin: .2em 0 0 .5em;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.category-card form {
+    grid-column: 2 / 3;
+}
+
+.category-card button {
+    float: right;
+    margin: .7em 1em 0 0;
+    background-color: #eb4034; 
+    border: none;
+    border-radius: .3em;
+    font-size: 1em;
+    color: #fff;
+    padding: .5em .7em;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add {
+    font-size: 1.8vh;
+    height: 25vh;
+    margin: auto;
+}
+
+.add h2 {
+    font-size: 2.5em;
+    padding: .1em;
+}
+
+.add input {
+    font-size: 1em;
+    width: 100%;
+    padding: .3em;
+    border: solid 1px #000;
+    border-radius: .3em;
+}
+
+.add button {
+    margin: 0 .3em 0 .3em;
+    background-color: #4CAF50; 
+    border: none;
+    border-radius: .3em;
+    font-size: 1em;
+    color: #fff;
+    padding: .7em .7em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.add a {
+    font-size: 1em;
+    margin: .5em 0 0 .5em;
+}
+
+.add-items {
+    display: grid;
+    grid-template-rows: 2fr 5fr;
+}
+
+.add-items h2 {
+    grid-row: 1 / 2;
+}
+
+.add-items form {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 50% 30% auto;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.add-items button {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+}
+
+.add-items select {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    font-size: 1em;
+    width: 100%;
+    padding: .3em;
+    border: solid 1px #000;
+    border-radius: .3em;
+}
+
+.add-items a {
+    grid-row: 3 / 4;
+    display: inline-block;
+}
+
+.add-categories {
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+
+.add-categories form {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 80% auto;
+}
+
+.add-categories button {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.add-categories a {
+    grid-row: 3 / 4;
+}
+
+.error {
+    color: #eb4034;
+}
+
+#title {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+#description {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+.links {
+    font-size: 1.3em;
+    margin: 1em 0 0 1em;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+    .add, .card {
+        width: 80%;
+    }
+    .empty-results {
+        margin-left: 10%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 800px) {
+    main {
+        width: 70%;
+        margin: auto;
+    }
+
+    .results {
+        height: 68vh;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .item-card {
+        grid-template-columns: 10% auto;
+    }
+
+    .empty-results {
+        margin-left: 5%;
+    }
+
+    .add {
+        height: 20vh;
+        margin: auto;
+        width: 99%;
+    }
+
+    .add-items {
+        display: block;
+    }
+
+    .add-items form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 30% 30% 30%;
+    }
+
+    .add input {
+        margin-top: .1em;
+        width: 99%;
+    }
+
+    .add-categories {
+        grid-template-rows: 1fr 1fr 1fr 2fr;
+    }
+
+    .add-categories form {
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        margin-bottom: 0;
+    }
+
+    .add-categories input {
+        width: 75%;
+    }
+
+    .add-categories button {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        width: 25%;
+    }
+
+    #title {
+        grid-column: 1 / 2;
+    }
+
+    #description {
+        grid-column: 1 / 2;
+    }
+
+    .add-items select {
+        margin-top: .1em;
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+        width: 90%;
+    }
+
+    .add-items a {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        margin-top: .5em;
+        margin-left: .5em;
+    }
+
+    .add-items button {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+        width: 90%;
+    }
+
+    .add button {
+        margin: 0;
+        margin-top: .3em;
+        padding-top: .4em;
+    }
+
+}
+
+@media (min-width: 1025px) {
+    main {
+        width: 50%;
+    }
+
+    .add-items button {
+        width: 50%;
+    }
+}
